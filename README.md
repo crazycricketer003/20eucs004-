@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+The code you have provided is for a React component that displays train tracking information. The component uses the MUI library for its styling.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To use this component, you will need to install the following dependencies:
 
-## Available Scripts
 
-In the project directory, you can run:
+npm install @mui/material
+npm install axios
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once the dependencies are installed, you can import the component into your project and use it like any other React component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Here is an example of how to use the component:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+import React from "react";
+import OutlinedCard from "./OutlinedCard";
 
-### `npm run build`
+const App = () => {
+  return (
+    <div>
+      <OutlinedCard />
+    </div>
+  );
+};
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default App;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The OutlinedCard component takes an array of train data as its prop. The train data should be in the following format:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[
+  {
+    "trainName": "Train Name",
+    "trainNumber": "Train Number",
+    "departureTime": {
+      "Hours": "Hours",
+      "Minutes": "Minutes",
+      "Seconds": "Seconds",
+    },
+    "delayedBy": "Delay",
+    "seatsAvailable": {
+      "sleeper": "Number of Sleeper Seats Available",
+      "AC": "Number of AC Seats Available",
+    },
+    "price": {
+      "sleeper": "Price of Sleeper Seats",
+      "AC": "Price of AC Seats",
+    },
+  },
+]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Once the component has been rendered, it will display the train tracking information in a card. The card will include the train name, train number, departure time, delay, number of seats available, and price.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I hope this helps!
